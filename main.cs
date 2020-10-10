@@ -97,7 +97,7 @@ class ParseOptions
                 }
                 else
                 {
-                    Console.WriteLine("error: unknown/unhandled flag \"{0}\"\n", arg);
+                    Console.WriteLine("error: unknown/unhandled flag \"{0}\"", arg);
                     return false;
                 }
             }
@@ -119,7 +119,6 @@ class Program
         int len;
         string arg;
         var po = new ParseOptions(args);
-        var nargs = po.Parse();
         if(po.Parse())
         {
             if((len = po.newargs.Count) == 0)
